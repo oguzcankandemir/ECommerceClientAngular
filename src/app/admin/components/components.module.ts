@@ -10,13 +10,17 @@ import { CustomerModule } from './customer/customer.module';
 
 @NgModule({
   declarations: [
+
   ],
   imports: [
     CommonModule,
     ProductsModule,
     OrderModule,
+    CustomerModule,
     DashboardModule,
-    CustomerModule
+  ],
+  exports: [
+
   ]
 })
 export class ComponentsModule { }

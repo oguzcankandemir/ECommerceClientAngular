@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\components",
+    "\\src\\app\\admin\\components\\dashboard",
+    "\\src\\app\\admin\\components\\order",
+    "\\src\\app\\admin\\layout",
+    "\\src\\app\\admin\\layout\\components",
+    "\\src\\app\\admin\\layout\\components\\sidebar",
+    "\\src\\app\\ui",
+    "\\src\\app\\ui\\components"
+  ],
+  "SelectedNode": "\\src\\app\\ui\\ui.module.ts",
+  "PreviewInSolutionExplorer": false
+}

@@ -12,7 +12,7 @@ import { ComponentsModule } from './components/components.module';
     LayoutModule,
     ComponentsModule
   ],
-  exports:[
+  exports: [
     LayoutModule
   ]
 })
