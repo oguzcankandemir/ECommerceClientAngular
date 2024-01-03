@@ -6,13 +6,8 @@
     "\\src\\app\\admin",
     "\\src\\app\\admin\\components",
     "\\src\\app\\admin\\components\\dashboard",
-    "\\src\\app\\admin\\components\\order",
-    "\\src\\app\\admin\\layout",
-    "\\src\\app\\admin\\layout\\components",
-    "\\src\\app\\admin\\layout\\components\\sidebar",
-    "\\src\\app\\ui",
-    "\\src\\app\\ui\\components"
+    "\\src\\app\\admin\\layout"
   ],
-  "SelectedNode": "\\src\\app\\ui\\ui.module.ts",
+  "SelectedNode": "\\src\\app\\admin\\layout\\layout.component.spec.ts",
   "PreviewInSolutionExplorer": false
 }
