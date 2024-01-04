@@ -32,12 +32,16 @@
             "styles": [
               "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss",
-              "bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/alertifyjs/build/css/alertify.min.css",
+              "node_modules/alertifyjs/build/css/themes/semantic.min.css"
             ],
             "scripts": [
-              "bootstrap/dist/js/bootstrap.min.js",
-              "jquery/dist/jquery.min.js"
-             
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/alertifyjs/build/alertify.min.js"
+              
             ]
           },
           "configurations": {
