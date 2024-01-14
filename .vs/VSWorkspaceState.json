@@ -6,7 +6,9 @@
     "\\src\\app\\admin",
     "\\src\\app\\admin\\components",
     "\\src\\app\\admin\\components\\dashboard",
+    "\\src\\app\\admin\\components\\products",
     "\\src\\app\\admin\\layout"
   ],
+  "SelectedNode": "\\src\\app\\admin\\components\\products\\products.component.html",
   "PreviewInSolutionExplorer": false
 }
