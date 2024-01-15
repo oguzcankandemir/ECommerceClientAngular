@@ -5,10 +5,11 @@
     "\\src\\app",
     "\\src\\app\\admin",
     "\\src\\app\\admin\\components",
-    "\\src\\app\\admin\\components\\dashboard",
     "\\src\\app\\admin\\components\\products",
-    "\\src\\app\\admin\\layout"
+    "\\src\\app\\admin\\components\\products\\create",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\common",
+    "\\src\\app\\services\\common\\models"
   ],
-  "SelectedNode": "\\src\\app\\admin\\components\\products\\products.component.html",
   "PreviewInSolutionExplorer": false
 }
