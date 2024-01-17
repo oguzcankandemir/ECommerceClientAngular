@@ -5,10 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements  OnInit {
-constructor(){}
+export class LayoutComponent implements OnInit {
+  constructor() { }
 
-ngOnInit(): void {
-  
-}
+  ngOnInit(): void {
+
+  }
 }
