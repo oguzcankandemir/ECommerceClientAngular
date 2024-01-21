@@ -17,7 +17,7 @@ import { CustomerModule } from './customer/customer.module';
     ProductsModule,
     OrderModule,
     CustomerModule,
-    DashboardModule,
+    DashboardModule
   ],
   exports: [
 
