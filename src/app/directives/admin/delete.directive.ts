@@ -3,9 +3,12 @@ import { Directive, ElementRef, HostListener, Input, Output, Renderer2 } from '@
 import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from '../../base/base.component';
 import { HttpClientService } from '../../services/common/http-client.service';
-import { ProductService } from '../../services/common/models/product.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent, DeleteState } from '../../dialogs/delete-dialog/delete-dialog.component';
+import { DialogService } from '../../services/common/dialog.service';
+import { AlerttifyService, MessageType, Position } from '../../services/admin/alerttify.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { ProductService } from '../../services/common/models/product.service';
 
 declare var $: any;
 
@@ -17,9 +20,12 @@ export class DeleteDirective {
   constructor(
     private element: ElementRef,
     private _renderer: Renderer2,
-    private productService: ProductService,
     private spinner: NgxSpinnerService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private alertifyService: AlerttifyService,
+    private dialogService: DialogService,   
+    private httpClientService: HttpClientService,
+    private productService: ProductService
   ) {
     const img = _renderer.createElement("img");
     img.setAttribute("src", "../../../../../assets/delete.png");
@@ -30,12 +36,13 @@ export class DeleteDirective {
   }
 
   @Input() id: string;
+  @Input() controller: string;
   @Output() callback: EventEmitter<any> = new EventEmitter();
 
   @HostListener("click")
   async onclick() {
     this.openDialog(async () => {
-      this.spinner.show(SpinnerType.BallAtom);
+      this.spinner.show(SpinnerType.BallScaleMultiple);
       const td: HTMLTableCellElement = this.element.nativeElement;
       await this.productService.delete(this.id);
       $(td.parentElement).animate({
@@ -61,3 +68,18 @@ export class DeleteDirective {
   }
 
 }
+
+ 
+  //openDialog(afterClosed: any): void {
+  //  const dialogRef = this.dialog.open(DeleteDialogComponent, {
+  //    width: '250px',
+  //    data: DeleteState.Yes,
+  //  });
+
+    
+  //  dialogRef.afterClosed().subscribe(result => {
+  //    if (result == DeleteState.Yes)
+  //      afterClosed();
+  //  });
+  //}
+
