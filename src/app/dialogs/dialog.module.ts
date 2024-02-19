@@ -4,12 +4,15 @@ import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 import { FileUploadDialogComponent } from './file-upload-dialog/file-upload-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { QrcodeDialogComponent } from './qrcode-dialog/qrcode-dialog.component';
+
 
 
 @NgModule({
   declarations: [
     DeleteDialogComponent,
-    FileUploadDialogComponent
+    FileUploadDialogComponent,
+    QrcodeDialogComponent
   ],
   imports: [
     CommonModule,

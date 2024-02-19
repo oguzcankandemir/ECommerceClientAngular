@@ -7,6 +7,8 @@ import { List_Product } from '../../../../contracts/list_product';
 import { AlerttifyService, MessageType, Position } from '../../../../services/admin/alerttify.service';
 import { ProductService } from '../../../../services/common/models/product.service';
 import { ViewChild } from '@angular/core';
+import { QrcodeDialogComponent } from '../../../../dialogs/qrcode-dialog/qrcode-dialog.component';
+import { DialogService } from '../../../../services/common/dialog.service';
 
 declare var $: any;
 
@@ -16,12 +18,12 @@ declare var $: any;
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent extends BaseComponent implements OnInit {
-  constructor(spinner: NgxSpinnerService, private productService: ProductService, private alertifyService: AlerttifyService) {
+  constructor(spinner: NgxSpinnerService, private productService: ProductService, private alertifyService: AlerttifyService, private dialogService: DialogService) {
     super(spinner)
   }
 
 
-  displayedColumns: string[] = ['name', 'stock', 'price', 'createdDate', 'updatedDate', 'edit', 'delete'];
+  displayedColumns: string[] = ['name', 'stock', 'price', 'createdDate', 'updatedDate', 'edit', 'delete','qrcode'];
   dataSource: MatTableDataSource<List_Product> = null;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -50,6 +52,14 @@ export class ListComponent extends BaseComponent implements OnInit {
   async ngOnInit() {
     await this.getProducts();
   }
+
+  showQRCode(productId: string) {
+    this.dialogService.openDialog({
+      componentType: QrcodeDialogComponent,
+      data: productId,
+      afterClosed: () => { }
+    })
+}
 }
 
 //p.Id,
